@@ -9,6 +9,8 @@
 -- Rechtsklick auf angelegte DB -> Open database 
 --  -> SQLITE EXPLORER öffnet sich unten links
 
+-- SQL kann ausgeführt werden mit STRG + Shift + Q (SQLite: Run query)
+
 -- Tabellen anlegen mit CREATE
 CREATE TABLE user (username TEXT, age INTEGER, email TEXT, password TEXT);
 
