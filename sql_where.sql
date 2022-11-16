@@ -8,12 +8,13 @@
 
 -- alle Datensätze ohne Passwort
 -- SELECT * FROM user
--- WHERE password = "";
+-- WHERE password = "";   -- -> wir erhalten nur die Datensätze mit einem Leerstring
 
 -- -- Abfrage auf NULL Werte nicht mit = sondern mit IS
 -- SELECT * FROM user
--- WHERE password IS NULL;
+-- WHERE password IS NULL;  -- -> wir erhalten nur die Datensätze mir NULL Wert
 
+-- Lösung: Logische Verknüpfung mit OR
 -- SELECT * FROM user
 -- WHERE password = "" 
 -- OR password IS NULL;
@@ -25,7 +26,12 @@
 -- Suche mit Wildcards/Platzhaltern
 -- % steht für ein beliebiges Zeichen, dass beliebig oft vorkommen darf
 -- SELECT * FROM user
--- WHERE email = "%new.mail";  -- sucht nach dem Sring "%new.mail"
+-- WHERE email = "%new.mail";  -- sucht nach dem String "%new.mail"
+
+-- sucht nach Datensätzen, in denen in der Spalte email beliebige Zeichen
+-- vor dem String "new.mail" stehen können (0 bis beliebig viele beliebige Zeichen)
+-- SELECT * FROM user
+-- WHERE email LIKE "%new.mail";  
 
 
 
