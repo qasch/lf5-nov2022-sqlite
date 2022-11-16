@@ -11,6 +11,15 @@
 
 -- SQL kann ausgeführt werden mit STRG + Shift + Q (SQLite: Run query)
 
--- Tabellen anlegen mit CREATE
-CREATE TABLE user (username TEXT, age INTEGER, email TEXT, password TEXT);
+-- Tabellen anlegen mit CREATE (ohne Primary Key)
+-- CREATE TABLE user (username TEXT, age INTEGER, email TEXT, password TEXT);
+
+CREATE TABLE user (
+    id INTEGER PRIMARY KEY,
+    username TEXT,
+    age INTEGER,
+    email TEXT,
+    password TEXT
+);
+
 
