@@ -21,7 +21,17 @@
 
 -- Durchschnittsalter aller user
 -- SELECT AVG(age) FROM user;
-SELECT AVG(age) AS 'Durchschnittsalter' FROM user;
+-- SELECT AVG(age) AS 'Durchschnittsalter' FROM user;
+
+-- Vorsicht bei Aggregatfunktionen und mehreren Ergebnissen. 
+-- Aggregatfunktionen fassen mehrere Ergebnisse zu einem zusammen. 
+-- Wird zusätzlich ein Attribut (Spalte) ausgewählt, wird nur der erste
+-- Fund angezeigt.
+-- (Es gibt zwei user mit Alter 23)
+SELECT username, MIN(age) FROM user;
+
+
+-- Aggregatfunktionen sind in WHERE-Statements nicht erlaubt!
 
 
 

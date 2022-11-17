@@ -34,6 +34,14 @@
 -- WHERE email LIKE "%new.mail";  
 
 
+-- Weitere Wildcard: _
+-- Der Unterstrich steht für ein beliebiges Zeichen, das exakt 1 mal vorkommt
+SELECT * FROM user
+WHERE username LIKE "_im";
+
+-- Auch derarige Konstrukte sind natürlich möglich:
+-- SELECT * FROM user
+-- WHERE email LIKE "_.%@%.mail";
 
 
 
