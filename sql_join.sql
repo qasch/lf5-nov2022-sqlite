@@ -21,21 +21,43 @@
 --     user, post
 
 -- (INNER) JOIN ohne Schlüsselwort JOIN
-SELECT
-    username, post
-FROM
-    user, post
-WHERE
-    post.user_id = user.id;
+-- SELECT
+--     username, post
+-- FROM
+--     user, post
+-- WHERE
+--     post.user_id = user.id;
 
 -- (INNER) JOIN mit Schlüsselwort JOIN
+-- SELECT
+--     user.username, 
+--     post.post, 
+--     datetime(post.date, 'unixepoch', 'localtime') AS 'date'
+-- FROM
+--     user
+-- JOIN
+--     post
+-- ON
+--     post.user_id = user.id
+-- WHERE 
+--     user.id = 2;
+
+
+-- LEFT JOIN
+-- Gibt auch die Datensätze von user aus, die keine Verknüpfung zur Tabelle post haben
+-- Wir wollen alle usernamen ermittlen, die noch keine Posts geschrieben haben:
 SELECT
-    username, post
+    user.username,      -- Spalte
+    post.post           -- Spalte 
 FROM
-    user
-JOIN
-    post
+    user    -- Tabelle
+LEFT JOIN
+    post    -- Tabelle
 ON
-    post.user_id = user.id;
+    post.user_id = user.id  -- Spalte
+WHERE
+    post.post IS NULL;    -- Spalte
+
+
 
 

@@ -1,0 +1,10 @@
+Merksatz zur Reihenfolge der SQL Befehle:
+
+              SELECT
+              FROM
+----------------------
+Warum       - WHERE
+Geht        - GROUP BY
+Herbert     - HAVING
+Oft         - ORDER BY
+Laufen      - LIMIT
