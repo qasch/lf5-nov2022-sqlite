@@ -28,10 +28,19 @@
 -- Wird zusätzlich ein Attribut (Spalte) ausgewählt, wird nur der erste
 -- Fund angezeigt.
 -- (Es gibt zwei user mit Alter 23)
-SELECT username, MIN(age) FROM user;
+-- SELECT username, MIN(age) FROM user;
 
 
 -- Aggregatfunktionen sind in WHERE-Statements nicht erlaubt!
+
+
+
+-- Vorsicht: es wird nur 4 anstatt 6 ausgegeben, da COUNT() NULL Werte 
+-- nicht mitzählt
+SELECT COUNT(age) FROM user;
+-- Daher bei COUNT() einfach immer * angeben:
+SELECT COUNT(*) FROM user;
+
 
 
 

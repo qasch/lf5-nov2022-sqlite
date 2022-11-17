@@ -26,8 +26,15 @@
 
 -- Es müssen nicht zwingend (abhängig von der Struktur der DB)
 -- Werte in alle Spalten eingefügt werden
-INSERT INTO user (username) VALUES ("heinz");
+-- INSERT INTO user (username) VALUES ("heinz");
 
+INSERT INTO user
+    (username, email, password)
+VALUES (
+    "haensel",
+    "haensel@mailbox.org",
+    "pa$$w0rd"
+    );
 
 
 

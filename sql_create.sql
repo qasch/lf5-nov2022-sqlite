@@ -25,7 +25,7 @@
 CREATE TABLE IF NOT EXISTS user (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
-    age INTEGER DEFAULT 0,
+    age INTEGER,
     email TEXT NOT NULL,
     password TEXT NOT NULL
 );

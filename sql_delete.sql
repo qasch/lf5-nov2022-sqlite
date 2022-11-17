@@ -8,6 +8,9 @@
 
 -- DELETE FROM user WHERE username = 'kai';
 
+-- 
+-- DELETE FROM user WHERE id = 4;
+
 -- DROP löscht alle Datensätze inklusive der Struktur der Tabelle
 -- -> Unterschied zu DELETE
 DROP TABLE user;

@@ -47,16 +47,16 @@
 -- Gibt auch die Datensätze von user aus, die keine Verknüpfung zur Tabelle post haben
 -- Wir wollen alle usernamen ermittlen, die noch keine Posts geschrieben haben:
 SELECT
-    user.username,      -- Spalte
-    post.post           -- Spalte 
+    u.username,      -- Spalte
+    p.post           -- Spalte 
 FROM
-    user    -- Tabelle
+    user AS u   -- Tabelle
 LEFT JOIN
-    post    -- Tabelle
+    post p    -- Tabelle
 ON
-    post.user_id = user.id  -- Spalte
+    p.user_id = u.id  -- Spalte
 WHERE
-    post.post IS NULL;    -- Spalte
+    p.post IS NULL;    -- Spalte
 
 
 

@@ -15,9 +15,9 @@
 -- UPDATE user SET password = "" WHERE id = 3;
 
 -- Löscht den Inhalt wirklich, so dass nichts (NULL) mehr darin enthalten ist
-UPDATE user SET password = NULL WHERE id = 6;
+-- UPDATE user SET password = NULL WHERE id = 6;
 
 
-
+UPDATE user SET age = 23 WHERE id = 4;
 
 
